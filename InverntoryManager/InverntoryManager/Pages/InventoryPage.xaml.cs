@@ -206,5 +206,9 @@ namespace InverntoryManager.Pages
 
             await FindItems(e.NewTextValue);
         }
+
+        void ToolbarItem_Clicked(System.Object sender, System.EventArgs e)
+        {
+        }
     }
 }

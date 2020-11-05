@@ -9,6 +9,7 @@
         <ToolbarItem Text="Add" IconImageSource="add.png" Clicked="OnAdd_Clicked"/>
         <ToolbarItem Text="Update" IconImageSource="update.png" Clicked="Update_Clicked" />
         <ToolbarItem Text="Delete" IconImageSource="trash.png" Clicked="Delete_Clicked"/>
+        <ToolbarItem Text="Camera" IconImageSource="qrscanner.png" Clicked="Delete_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>

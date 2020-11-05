@@ -136,7 +136,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\InverntoryManager\InverntoryManager.csproj">
-      <Project>{9461ECE6-0E2C-4D4F-9573-7D95AB6E6616}</Project>
+      <Project>{2E2574EC-F1C4-44B9-877D-4F58D138EC52}</Project>
       <Name>InverntoryManager</Name>
     </ProjectReference>
   </ItemGroup>
