@@ -8,6 +8,8 @@ using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using InverntoryManager.Data;
+using ZXing.Net.Mobile.Forms;
+using ZXing.Mobile;
 
 namespace InverntoryManager.Pages
 {
@@ -207,8 +209,22 @@ namespace InverntoryManager.Pages
             await FindItems(e.NewTextValue);
         }
 
-        void ToolbarItem_Clicked(System.Object sender, System.EventArgs e)
-        {
+         private async  void Qrscanner_Clicked(System.Object sender, System.EventArgs e)
+         {
+            ZXingScannerPage scanPage = new ZXingScannerPage();
+            scanPage.OnScanResult += (result) =>
+            {
+                scanPage.IsScanning = false;
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    Navigation.PopAsync();
+                  
+                });
+            };
+            await Navigation.PushAsync(scanPage);
         }
+
+
     }
+    
 }
