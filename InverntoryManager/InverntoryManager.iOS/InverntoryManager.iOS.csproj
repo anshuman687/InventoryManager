@@ -145,6 +145,7 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\group%403x.png" />
+    <BundleResource Include="Resources\materialdesignicons-webfont.ttf" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\minus.png" />

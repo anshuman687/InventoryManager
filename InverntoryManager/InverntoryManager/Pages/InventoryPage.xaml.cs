@@ -218,7 +218,7 @@ namespace InverntoryManager.Pages
                 Device.BeginInvokeOnMainThread(() =>
                 {
                     Navigation.PopAsync();
-                  
+              
                 });
             };
             await Navigation.PushAsync(scanPage);
