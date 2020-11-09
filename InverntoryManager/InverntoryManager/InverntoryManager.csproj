@@ -8,12 +8,14 @@
 
   <ItemGroup>
     <None Remove="Image\BlankProfile.jpg" />
-    <None Remove="Image\WesternLogo.png" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Image\BlankProfile.jpg" />
-    <EmbeddedResource Include="Image\WesternLogo.png" />
+    <EmbeddedResource Include="..\..\..\..\..\Downloads\appimg.png">
+      <Link>Image\appimg.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
