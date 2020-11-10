@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:local="clr-namespace:InverntoryManager.MarkupExtension"
-             mc:Ignorable="d"
+             mc:Ignorable="d" 
              x:Class="InverntoryManager.Pages.HomePage"
              Title="Dashboard">
     <ContentPage.Content>
@@ -31,7 +30,7 @@
                 </Grid.ColumnDefinitions>
                 <Label FontSize="Body" x:Name="profile"
                            TextColor="White" FontAttributes="Bold"/>
-                <Button Grid.Row="1" Grid.Column="2" Text="Add items to store" BackgroundColor="White" CornerRadius="10" Margin="80,0,50,10"/> 
+                <Button Grid.Row="1" Grid.Column="2" Text="Add items to store" BackgroundColor="White" CornerRadius="10" Margin="80,0,50,10" Clicked="Button_Clicked"/> 
                 <StackLayout Grid.Row="2" Grid.Column="2" Orientation="Vertical" VerticalOptions="FillAndExpand">
                     <Button Text="Checkout or Returns" TextColor="Black" BackgroundColor="White" CornerRadius="10" Margin="80,10,50,10"/>
                     <Button Text="Issues &amp; Consumable" TextColor="Black" BackgroundColor="White" CornerRadius="10" Margin="80,10,50,10"/>
