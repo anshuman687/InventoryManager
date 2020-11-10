@@ -6,34 +6,38 @@
              xmlns:local="clr-namespace:InverntoryManager.MarkupExtension"
              mc:Ignorable="d"
              x:Class="InverntoryManager.Pages.HomePage"
-             Title="Home">
+             Title="Dashboard">
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="150"/>
+                <RowDefinition Height="380"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="20"/>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0" BackgroundColor="Crimson">
+            <Grid Grid.Row="0" BackgroundColor="#42619a">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="10"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="10"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="10"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <Image Grid.Row="1" Grid.Column="1" Source="{local:EmbeddedImage ResourceId=InverntoryManager.Image.WesternLogo.png}"/>
-                <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
-                    <Label Text="Hello" FontAttributes="Bold"  FontSize="Body" TextColor="White"/>
-                    <Label FontSize="Body" x:Name="profile"
+                <Label FontSize="Body" x:Name="profile"
                            TextColor="White" FontAttributes="Bold"/>
+                <Button Grid.Row="1" Grid.Column="2" Text="Add items to store" BackgroundColor="White" CornerRadius="10" Margin="80,0,50,10"/> 
+                <StackLayout Grid.Row="2" Grid.Column="2" Orientation="Vertical" VerticalOptions="FillAndExpand">
+                    <Button Text="Checkout or Returns" TextColor="Black" BackgroundColor="White" CornerRadius="10" Margin="80,10,50,10"/>
+                    <Button Text="Issues &amp; Consumable" TextColor="Black" BackgroundColor="White" CornerRadius="10" Margin="80,10,50,10"/>
+                    <Button Text="Stock take" TextColor="Black" BackgroundColor="White" CornerRadius="10" Margin="80,10,50,10"/>
+                    <Button Text="Current stock" TextColor="Black" BackgroundColor="White" CornerRadius="10" Margin="80,10,50,10"/>
+                    
                 </StackLayout>
             </Grid>
             <Label Text="Recently add Items" Grid.Row="1" VerticalOptions="End" Margin="33,0,0,0" 
