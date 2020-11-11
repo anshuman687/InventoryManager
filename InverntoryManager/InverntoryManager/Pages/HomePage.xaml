@@ -7,12 +7,41 @@
              x:Class="InverntoryManager.Pages.HomePage"
              Title="Dashboard">
     <ContentPage.Content>
-        <Grid>
+        <ScrollView>
+            <Grid BackgroundColor="#42619a">
+                <StackLayout>
+                    <StackLayout>
+                        <Frame Margin="50,50,50,20" Padding="0" HeightRequest="60">
+                            <Button Text="Add items to store" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" Clicked="Button_Clicked"/>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout>
+                        <Frame Padding="0" Margin="50,20,50,20" HeightRequest="60">
+                            <Button Text="Checkout or Returns" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" Clicked="Button_Clicked1"/>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout>
+                        <Frame Padding="0" Margin="50,20,50,20" HeightRequest="60">
+                            <Button Text="Issues &amp; Consumable" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"/>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout>
+                        <Frame Padding="0" Margin="50,20,50,20" HeightRequest="60">
+                            <Button Text="Stock take" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"/>
+                        </Frame>
+                    </StackLayout>
+                   <StackLayout>
+                        <Frame Padding="0" Margin="50,20,50,20" HeightRequest="60">
+                            <Button Text="Current stock" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"/>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+        <!--<Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="380"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="20"/>
+                <RowDefinition Height="680"/>
+                
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" BackgroundColor="#42619a">
                 <Grid.RowDefinitions>
@@ -30,11 +59,11 @@
                 </Grid.ColumnDefinitions>
                 <Label FontSize="Body" x:Name="profile"
                            TextColor="White" FontAttributes="Bold"/>
-                <Button Grid.Row="1" Grid.Column="2" Text="Add items to store" BackgroundColor="White" CornerRadius="10" Margin="80,0,50,10" Clicked="Button_Clicked"/> 
+                <Button Grid.Row="1" Grid.Column="2" Text="Add items to store" BackgroundColor="White" CornerRadius="10" Margin="80,10,50,10"/> 
                 <StackLayout Grid.Row="2" Grid.Column="2" Orientation="Vertical" VerticalOptions="FillAndExpand">
                     <Button Text="Checkout or Returns" TextColor="Black" BackgroundColor="White" CornerRadius="10" Margin="80,10,50,10"/>
                     <Button Text="Issues &amp; Consumable" TextColor="Black" BackgroundColor="White" CornerRadius="10" Margin="80,10,50,10"/>
-                    <Button Text="Stock take" TextColor="Black" BackgroundColor="White" CornerRadius="10" Margin="80,10,50,10"/>
+                    <Button Text="2" TextColor="Black" BackgroundColor="White" CornerRadius="10" Margin="80,10,50,10"/>
                     <Button Text="Current stock" TextColor="Black" BackgroundColor="White" CornerRadius="10" Margin="80,10,50,10"/>
                     
                 </StackLayout>
@@ -71,6 +100,6 @@
                     </CollectionView.ItemTemplate>
                 </CollectionView>
             </ScrollView>
-        </Grid>
+        </Grid>-->
     </ContentPage.Content>
 </ContentPage>

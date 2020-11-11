@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:InverntoryManager.MarkupExtension" 
              mc:Ignorable="d"
              x:Class="InverntoryManager.Pages.OpeningPage"
-             BackgroundColor="#42619a"
+             BackgroundColor="White"
              Padding="20,30"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
@@ -29,7 +29,7 @@
                          AbsoluteLayout.LayoutFlags="PositionProportional">
                 <Button 
                     x:Name="loginBtm"
-			        Text="Sign in" 
+			        Text="Sign in"   
 			        TextColor="White" FontAttributes="Bold"
 			        BackgroundColor="#42619a"
                     Clicked="loginBtm_Clicked"/>

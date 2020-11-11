@@ -20,36 +20,41 @@ namespace InverntoryManager.Pages
         {
             user = ConstentsUser.user;
             InitializeComponent();
-            profile.Text = user.Username;
-            itemCollectionView.SelectionMode = SelectionMode.None;
-            _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
+            //    profile.Text = user.Username;
+            //    itemCollectionView.SelectionMode = SelectionMode.None;
+            //    _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
+            //}
+
+            //protected override async void OnAppearing()
+            //{
+            //    try
+            //    {
+            //        var table = await _connection.Table<Item>().ToListAsync();
+            //        var items = from item in table
+            //                    where item.Owner == user.Username
+            //                    orderby item.AddDate descending
+            //                    select item;
+
+            //        _items = new ObservableCollection<Item>(items);
+            //        itemCollectionView.ItemsSource = _items;
+            //    }
+            //    catch
+            //    {
+            //        return;
+            //    }
+            //    base.OnAppearing();
+            //}
         }
-
-        protected override async void OnAppearing()
-        {
-            try
-            {
-                var table = await _connection.Table<Item>().ToListAsync();
-                var items = from item in table
-                            where item.Owner == user.Username
-                            orderby item.AddDate descending
-                            select item;
-
-                _items = new ObservableCollection<Item>(items);
-                itemCollectionView.ItemsSource = _items;
-            }
-            catch
-            {
-                return;
-            }
-            base.OnAppearing();
-        }
-
        private async void Button_Clicked(System.Object sender, System.EventArgs e)
         {
             await Navigation.PushAsync(new InventoryPage());
         }
 
-     
+        private async void Button_Clicked1(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new ReportPage());
+        }
+
+
     }
 }
