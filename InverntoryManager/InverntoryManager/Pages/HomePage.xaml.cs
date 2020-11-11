@@ -55,6 +55,9 @@ namespace InverntoryManager.Pages
             await Navigation.PushAsync(new ReportPage());
         }
 
+        private void Button_Clicked_1(object sender, System.EventArgs e)
+        {
 
+        }
     }
 }
