@@ -3,11 +3,10 @@
   <item>
     <color android:color="@color/launcher_background"/>
   </item>
-  <item  android:height="200dp"
-    android:width="200dp" android:gravity="center" >
+  <item  android:height="160dp"
+    android:width="250dp" android:gravity="center" >
     <bitmap 
-        android:src="@drawable/splash"
-        android:tileMode="disabled"
-        android:gravity="center"/>
+        android:src="@drawable/appimg"
+      />
   </item>
 </layer-list>
