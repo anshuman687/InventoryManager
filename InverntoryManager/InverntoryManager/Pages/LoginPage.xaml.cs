@@ -51,7 +51,7 @@ namespace InverntoryManager.Pages
             if (checkUserInfo())
             {
                 ConstentsUser.user = info;
-                DisplayAlert("Sign in"," Signin Success","OK");
+                //DisplayAlert("Sign in"," Signin Success","OK");
                 if (isAdmin(info.admin))
                     Application.Current.MainPage = new TeacherMainPage();
                 else

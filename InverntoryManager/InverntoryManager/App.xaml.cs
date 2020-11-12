@@ -13,7 +13,7 @@ namespace InverntoryManager
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new OpeningPage());
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()

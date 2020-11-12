@@ -9,9 +9,9 @@
 
     <ContentPage.Content>
         <ScrollView>
-            <Grid>
+            <Grid BackgroundColor="White">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="180"/>
                     <RowDefinition Height="360"/>
 
 
@@ -42,24 +42,24 @@
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
 
-                        <Frame Grid.Row="1" CornerRadius="10" Margin="40,10,40,0" >
+                        <Frame Grid.Row="1" CornerRadius="5" Margin="40,10,40,0" Padding="0" HeightRequest="60" BorderColor="#42619a" >
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="&#xf0004;" FontSize="20" TextColor="#42619a" FontFamily="{StaticResource MaterialFontFamily}" VerticalOptions="Center"/>
+                                <Label Text="&#xf0004;" FontSize="20" TextColor="#42619a" FontFamily="{StaticResource MaterialFontFamily}" VerticalOptions="Center" Margin="10"/>
 
-                                <controls:BorderlessEntry Placeholder="Username" HorizontalOptions="FillAndExpand" TextColor="Gray" x:Name="UserName"/>
+                                <controls:BorderlessEntry Placeholder="Username" HorizontalOptions="FillAndExpand" TextColor="#42619a" x:Name="UserName"/>
                             </StackLayout>
                         </Frame>
 
-                        <Frame Grid.Row="2" CornerRadius="10" Margin="40,10,40,0" >
+                        <Frame Grid.Row="2" CornerRadius="5" Margin="40,10,40,0"  Padding="0" HeightRequest="60" BorderColor="#42619a">
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="&#xf0340;" FontSize="20" TextColor="#42619a" FontFamily="{StaticResource MaterialFontFamily}" VerticalOptions="Center"/>
-                                <controls:BorderlessEntry Placeholder="Password" TextColor="Gray" x:Name="password" HorizontalOptions="FillAndExpand"
+                                <Label Text="&#xf0340;" FontSize="20" TextColor="#42619a" FontFamily="{StaticResource MaterialFontFamily}" VerticalOptions="Center" Margin="10"/>
+                                <controls:BorderlessEntry Placeholder="Password" TextColor="#42619a" x:Name="password" HorizontalOptions="FillAndExpand"
                             IsPassword="True"/>
                             </StackLayout>
                         </Frame>
                         <StackLayout Orientation="Horizontal" Grid.Row="4">
                             <StackLayout Orientation="Horizontal"  Margin="30,10,0,0">
-                                <CheckBox Color="Black" x:Name="showPassword" CheckedChanged="showPassword_CheckedChanged"/>
+                                <CheckBox Color="#42619a" x:Name="showPassword" CheckedChanged="showPassword_CheckedChanged"/>
                                 <Label Text="Show password" VerticalOptions="Center"/>
                             </StackLayout>
                             <!--<Switch x:Name="styleSwitch" Margin="30,0,0,0"/>
@@ -80,7 +80,7 @@
                             
                         </StackLayout>
                         <StackLayout Grid.Row="5" Margin="40,10,40,10">
-                            <Button Text="Sign In"  x:Name="signInBtm" CornerRadius="10"
+                            <Button Text="Sign In"  x:Name="signInBtm" CornerRadius="10" Padding="0"
                         BackgroundColor="#42619a" TextColor="White" FontAttributes="Bold" Clicked="signInBtm_Clicked"/>
                         </StackLayout>
                     </Grid>
