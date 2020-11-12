@@ -37,8 +37,8 @@
                 </TableRoot>
             </TableView>
             <StackLayout Padding="30,0,30,40">
-                <Button x:Name="Update" Text="Update" BackgroundColor="Crimson" Pressed="Update_Pressed" />
-                <Button x:Name="goBack" Text="Go Back" BackgroundColor="Crimson" Pressed="goBack_Pressed" />
+                <Button x:Name="Update" Text="Update" BackgroundColor="#42619a" Pressed="Update_Pressed" TextColor="White" />
+                <Button x:Name="goBack" Text="Go Back" BackgroundColor="#42619a" Pressed="goBack_Pressed" TextColor="White" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

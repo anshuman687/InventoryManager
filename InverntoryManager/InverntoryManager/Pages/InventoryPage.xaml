@@ -4,26 +4,54 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             Title="Adding items"
              x:Class="InverntoryManager.Pages.InventoryPage">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" IconImageSource="add.png" Clicked="OnAdd_Clicked"/>
         <ToolbarItem Text="Update" IconImageSource="update.png" Clicked="Update_Clicked" />
         <ToolbarItem Text="Delete" IconImageSource="trash.png" Clicked="Delete_Clicked"/>
-        <ToolbarItem Text="Camera" IconImageSource="qrscanner.png" Clicked="Qrscanner_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="White">
             <Grid Padding="5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <SearchBar x:Name="SearchBar" Grid.Column="0" Placeholder="Search" TextChanged="SearchBar_TextChanged" />
-                <CheckBox Grid.Column="1" x:Name="MultiSelect"/>
+                <Picker Title="Select Store" x:Name="Store" HorizontalOptions="FillAndExpand" >
+                    <Picker.Items>
+                        <x:String>Shop1</x:String>
+                        <x:String>Shop2</x:String>
+                        <x:String>Shop3</x:String>
+                        <x:String>Shop4</x:String>
+                        <x:String>Shop5</x:String>
+                        <x:String>Shop6</x:String>
+                    </Picker.Items>
+                </Picker>
+                <!--<SearchBar x:Name="SearchBar" Grid.Column="0" Placeholder="Search" TextChanged="SearchBar_TextChanged" />-->
+                <Picker Grid.Column="1" Title="StoreID" x:Name="StoreID" HorizontalOptions="FillAndExpand">
+                    <Picker.Items>
+                        <x:String>01</x:String>
+                        <x:String>02</x:String>
+                        <x:String>03</x:String>
+                        <x:String>04</x:String>
+                        <x:String>05</x:String>
+                        <x:String>06</x:String>
+                    </Picker.Items>
+                </Picker>
             </Grid>
+            <Frame HasShadow="False" CornerRadius="10" Padding="0" Margin="60,0,60,10" BorderColor="#42619a">
+                <StackLayout>
+                    <Label Text="&#xf0072;" FontSize="60" FontFamily="{StaticResource MaterialFontFamily}" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand" TextColor="#42619a"/>
+                    <Label Text="Scan" TextColor="Black" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Qrscanner_Clicked"/>
+                </Frame.GestureRecognizers>
+            </Frame>
             <CollectionView x:Name="itemCollectionView" 
                       Margin="10" SelectionMode="Single">
                 <CollectionView.ItemsLayout>
@@ -48,13 +76,17 @@
                                 <Label Text="Stock:" FontSize="12"/>
                                 <Label Text="{Binding Stock}"  FontSize="12"/>
                             </StackLayout>
-                            <CheckBox IsChecked="{Binding Selected}" 
+
+                            <!--<CheckBox IsChecked="{Binding Selected}" 
                                       Grid.Row="1" Grid.Column="2" Grid.RowSpan="2"
-                                      IsVisible="{Binding Source={x:Reference MultiSelect}, Path= IsChecked}"/>
+                                      IsVisible="{Binding Source={x:Reference MultiSelect}, Path= IsChecked}"/>-->
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+            <StackLayout>
+                <Button Text="Completed" TextColor="White" CornerRadius="10" VerticalOptions="FillAndExpand" Margin="40,0,40,10" FontSize="20" BackgroundColor="#42619a" Clicked="Button_Clicked"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

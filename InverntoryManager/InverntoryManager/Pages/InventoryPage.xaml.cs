@@ -160,27 +160,8 @@ namespace InverntoryManager.Pages
         {
             if (_user.admin)
             {
-                if (MultiSelect.IsChecked)
-                {
-                    try
-                    {
-                        foreach (Item item in _items.ToList())
-                        {
-                            if (item.Selected)
-                            {
-                                await _connection.DeleteAsync(item);
-                                _items.Remove(item);
-                            }
-                        }
-                    }
-                    catch
-                    {
-                        return;
-                    }
-
-                }
-                else
-                {
+                
+                
                     try
                     {
                         var item = itemCollectionView.SelectedItem as Item;
@@ -196,9 +177,9 @@ namespace InverntoryManager.Pages
                     {
                         return;
                     }
-                }
+                
             }
-           else { return;}
+            else { return; }
         }
 
         private async void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
@@ -209,7 +190,7 @@ namespace InverntoryManager.Pages
             await FindItems(e.NewTextValue);
         }
 
-         private async  void Qrscanner_Clicked(System.Object sender, System.EventArgs e)
+        private async  void Qrscanner_Clicked(System.Object sender, System.EventArgs e)
          {
             ZXingScannerPage scanPage = new ZXingScannerPage();
             scanPage.OnScanResult += (result) =>
@@ -224,6 +205,10 @@ namespace InverntoryManager.Pages
             await Navigation.PushAsync(scanPage);
         }
 
+       private async void Button_Clicked(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new HomePage());
+        }
 
     }
     
