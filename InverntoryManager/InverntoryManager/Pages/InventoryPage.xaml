@@ -4,12 +4,12 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             Title="Adding items"
+             Title="Adding items to Store"
              x:Class="InverntoryManager.Pages.InventoryPage">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" IconImageSource="add.png" Clicked="OnAdd_Clicked"/>
+        <!--<ToolbarItem Text="Add" IconImageSource="add.png" Clicked="OnAdd_Clicked"/>
         <ToolbarItem Text="Update" IconImageSource="update.png" Clicked="Update_Clicked" />
-        <ToolbarItem Text="Delete" IconImageSource="trash.png" Clicked="Delete_Clicked"/>
+        <ToolbarItem Text="Delete" IconImageSource="trash.png" Clicked="Delete_Clicked"/>-->
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout BackgroundColor="White">
@@ -43,7 +43,7 @@
                     </Picker.Items>
                 </Picker>
             </Grid>
-            <Frame HasShadow="False" CornerRadius="10" Padding="0" Margin="60,0,60,10" BorderColor="#42619a">
+            <Frame HasShadow="False" CornerRadius="10" Padding="0" Margin="60,0,60,10">
                 <StackLayout>
                     <Label Text="&#xf0072;" FontSize="60" FontFamily="{StaticResource MaterialFontFamily}" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand" TextColor="#42619a"/>
                     <Label Text="Scan" TextColor="Black" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
@@ -52,41 +52,51 @@
                     <TapGestureRecognizer Tapped="Qrscanner_Clicked"/>
                 </Frame.GestureRecognizers>
             </Frame>
-            <CollectionView x:Name="itemCollectionView" 
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Item Code" Margin="20,0,0,0" FontSize="15" FontAttributes="Bold"/>
+                <Label Text="Description" Margin="20,0,0,0" FontSize="15" FontAttributes="Bold"/>
+                <Label Text="QTY" Margin="30,0,0,0" FontSize="15" FontAttributes="Bold"/>
+                <Label Text="Store" Margin="40,0,0,0" FontSize="15" FontAttributes="Bold"/>
+            </StackLayout>
+            <!--<CollectionView x:Name="itemCollectionView" 
                       Margin="10" SelectionMode="Single">
                 <CollectionView.ItemsLayout>
-                    <GridItemsLayout Orientation="Vertical" Span="2" />
+                    <GridItemsLayout Orientation="Vertical" Span="2"/>
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid Padding="5">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="80"/>
-                                <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="35"/>
-                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
                             <Image Source="{Binding ImageUrl}" Grid.RowSpan="2" 
                                        Aspect="AspectFill" HeightRequest="60" WidthRequest="60"/>
-                            <Label Text="{Binding Name}" Grid.Column="1" FontAttributes="Bold"/>
+                           
                             <StackLayout Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
-                                <Label Text="Stock:" FontSize="12"/>
-                                <Label Text="{Binding Stock}"  FontSize="12"/>
+                                 <Label Text="{Binding Name}" FontSize="15"  FontAttributes="Bold"/>
+                                <Label Text="Stocks" FontSize="15" FontAttributes="Bold"/>
+                                <Label Text="{Binding Stock}" FontSize="12"/>
+                                 <Label Text="QTY" Grid.Row="3"  FontSize="15"  FontAttributes="Bold"/>
                             </StackLayout>
 
-                            <!--<CheckBox IsChecked="{Binding Selected}" 
+                            <CheckBox IsChecked="{Binding Selected}" 
                                       Grid.Row="1" Grid.Column="2" Grid.RowSpan="2"
-                                      IsVisible="{Binding Source={x:Reference MultiSelect}, Path= IsChecked}"/>-->
+                                      IsVisible="{Binding Source={x:Reference MultiSelect}, Path= IsChecked}"/>
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
-            </CollectionView>
-            <StackLayout>
+            </CollectionView>-->
+            <!--<StackLayout>
                 <Button Text="Completed" TextColor="White" CornerRadius="10" VerticalOptions="FillAndExpand" Margin="40,0,40,10" FontSize="20" BackgroundColor="#42619a" Clicked="Button_Clicked"/>
-            </StackLayout>
+            </StackLayout>-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

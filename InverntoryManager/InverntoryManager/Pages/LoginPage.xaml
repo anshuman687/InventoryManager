@@ -42,18 +42,18 @@
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
 
-                        <Frame Grid.Row="1" CornerRadius="5" Margin="40,10,40,0" Padding="0" HeightRequest="60" BorderColor="#42619a" >
+                        <Frame Grid.Row="1" Margin="40,10,40,0" Padding="0" HeightRequest="60" BackgroundColor="#e0eff6">
                             <StackLayout Orientation="Horizontal">
                                 <Label Text="&#xf0004;" FontSize="20" TextColor="#42619a" FontFamily="{StaticResource MaterialFontFamily}" VerticalOptions="Center" Margin="10"/>
 
-                                <controls:BorderlessEntry Placeholder="Username" HorizontalOptions="FillAndExpand" TextColor="#42619a" x:Name="UserName"/>
+                                <controls:BorderlessEntry Placeholder="Username" HorizontalOptions="FillAndExpand" TextColor="Black" x:Name="UserName"/>
                             </StackLayout>
                         </Frame>
 
-                        <Frame Grid.Row="2" CornerRadius="5" Margin="40,10,40,0"  Padding="0" HeightRequest="60" BorderColor="#42619a">
+                        <Frame Grid.Row="2" Margin="40,10,40,0"  Padding="0" HeightRequest="60" BackgroundColor="#e0eff6">
                             <StackLayout Orientation="Horizontal">
                                 <Label Text="&#xf0340;" FontSize="20" TextColor="#42619a" FontFamily="{StaticResource MaterialFontFamily}" VerticalOptions="Center" Margin="10"/>
-                                <controls:BorderlessEntry Placeholder="Password" TextColor="#42619a" x:Name="password" HorizontalOptions="FillAndExpand"
+                                <controls:BorderlessEntry Placeholder="Password" TextColor="Black" x:Name="password" HorizontalOptions="FillAndExpand"
                             IsPassword="True"/>
                             </StackLayout>
                         </Frame>
@@ -80,7 +80,7 @@
                             
                         </StackLayout>
                         <StackLayout Grid.Row="5" Margin="40,10,40,10">
-                            <Button Text="Sign In"  x:Name="signInBtm" CornerRadius="10" Padding="0"
+                            <Button Text="Sign In"  x:Name="signInBtm" Padding="0"
                         BackgroundColor="#42619a" TextColor="White" FontAttributes="Bold" Clicked="signInBtm_Clicked"/>
                         </StackLayout>
                     </Grid>

@@ -41,7 +41,7 @@ namespace InverntoryManager.Pages
         {
             try { _connection = DependencyService.Get<ISQLiteDb>().GetConnection(); }
             catch { await DisplayAlert("Error", "SQL Table Connection", "OK"); }
-            itemCollectionView.ItemsSource = await getData();
+            //itemCollectionView.ItemsSource = await getData();
         }
 
         protected override async void OnAppearing()
@@ -49,7 +49,7 @@ namespace InverntoryManager.Pages
             try
             {
                 _items = await getData();
-                itemCollectionView.ItemsSource = _items;
+                //itemCollectionView.ItemsSource = _items;
             }
             catch
             {
@@ -67,7 +67,7 @@ namespace InverntoryManager.Pages
                 var items = from item in table
                             where item.Name == Item
                             select item;
-                itemCollectionView.ItemsSource = items;
+                //itemCollectionView.ItemsSource = items;
             }
             catch (Exception)
             {
@@ -123,7 +123,7 @@ namespace InverntoryManager.Pages
             }
             else
             {
-                item = itemCollectionView.SelectedItem as Item;
+                //item = itemCollectionView.SelectedItem as Item;
                 var temp = new Item
                 {
                     Name = item.Name,
@@ -141,7 +141,7 @@ namespace InverntoryManager.Pages
             {
                 try
                 {
-                    var item = itemCollectionView.SelectedItem as Item;
+                    //var item = itemCollectionView.SelectedItem as Item;
                     if (item == null)
                     {
                         await DisplayAlert("Alert", "No item selected!", "OK");
@@ -164,7 +164,7 @@ namespace InverntoryManager.Pages
                 
                     try
                     {
-                        var item = itemCollectionView.SelectedItem as Item;
+                        //var item = itemCollectionView.SelectedItem as Item;
                         if (item == null)
                         {
                             await DisplayAlert("Alert", "No item selected", "OK");
