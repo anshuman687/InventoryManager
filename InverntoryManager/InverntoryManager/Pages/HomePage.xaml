@@ -8,10 +8,10 @@
              Title="Dashboard">
     <ContentPage.Content>
         <ScrollView>
-            <Grid BackgroundColor="White">
+            <Grid BackgroundColor="WhiteSmoke">
                 <StackLayout>
 
-                    <Frame Margin="50,50,50,20" Padding="0" HeightRequest="60" BorderColor="#42619a" CornerRadius="5" HasShadow="False">
+                    <Frame Margin="50,50,50,20" Padding="0" HeightRequest="60" CornerRadius="5" HasShadow="False">
                         <StackLayout Orientation="Horizontal">
                             <Label Text="&#xf0112;" VerticalOptions="Center" HorizontalOptions="Start" FontFamily="{StaticResource MaterialFontFamily}" FontSize="25" Margin="15,0,0,0" TextColor="#42619a"/>
                             <Button Text="Add items to store" VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="Transparent" Clicked="Button_Clicked" TextColor="#42619a"/>
@@ -20,7 +20,7 @@
                     </Frame>
 
 
-                    <Frame Padding="0" Margin="50,20,50,20" HeightRequest="60" CornerRadius="5" BorderColor="#42619a" HasShadow="False">
+                    <Frame Padding="0" Margin="50,20,50,20" HeightRequest="60" CornerRadius="5" HasShadow="False">
                         <StackLayout Orientation="Horizontal">
                             <Label Text="&#xf014e;" VerticalOptions="Center" HorizontalOptions="Start" FontFamily="{StaticResource MaterialFontFamily}" FontSize="25" Margin="15,0,0,0" TextColor="#42619a"/>
                             <Button Text="Checkout or Returns" VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="Transparent" Clicked="Button_Clicked1" Margin="0,0,0,0" TextColor="#42619a"/>
@@ -29,7 +29,7 @@
                     </Frame>
 
 
-                    <Frame Padding="0" Margin="50,20,50,20" HeightRequest="60" CornerRadius="5" BorderColor="#42619a" HasShadow="False">
+                    <Frame Padding="0" Margin="50,20,50,20" HeightRequest="60" CornerRadius="5" HasShadow="False">
                         <StackLayout Orientation="Horizontal">
                              <Label Text="&#xf0026;" VerticalOptions="Center" HorizontalOptions="Start" FontFamily="{StaticResource MaterialFontFamily}" FontSize="25" Margin="15,0,0,0" TextColor="#42619a"/>
                             <Button Text="Issues &amp; Consumable" VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="Transparent" Margin="0,0,0,0" TextColor="#42619a"/>
@@ -38,7 +38,7 @@
                     </Frame>
 
 
-                    <Frame Padding="0" Margin="50,20,50,20" HeightRequest="60" CornerRadius="5" BorderColor="#42619a" HasShadow="False">
+                    <Frame Padding="0" Margin="50,20,50,20" HeightRequest="60" CornerRadius="5" HasShadow="False">
                         <StackLayout Orientation="Horizontal">
                                <Label Text="&#xf014a;" VerticalOptions="Center" HorizontalOptions="Start" FontFamily="{StaticResource MaterialFontFamily}" FontSize="25" Margin="15,0,0,0" TextColor="#42619a"/>
                             <Button Text="Stock take" VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="Transparent" Margin="0,0,0,0" TextColor="#42619a"/>
@@ -46,7 +46,7 @@
                         </StackLayout>
                     </Frame>
 
-                    <Frame Padding="0" Margin="50,20,50,20" HeightRequest="60" CornerRadius="5" BorderColor="#42619a" HasShadow="False">
+                    <Frame Padding="0" Margin="50,20,50,20" HeightRequest="60" CornerRadius="5" HasShadow="False">
                         <StackLayout Orientation="Horizontal">
                             <Label Text="&#xf014d;" VerticalOptions="Center" HorizontalOptions="Start" FontFamily="{StaticResource MaterialFontFamily}" FontSize="25" Margin="15,0,0,0" TextColor="#42619a"/>
                             <Button Text="Current stock" VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="Transparent" Margin="0,0,0,0" TextColor="#42619a"/>

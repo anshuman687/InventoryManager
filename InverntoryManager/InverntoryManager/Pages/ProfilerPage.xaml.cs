@@ -91,7 +91,7 @@ namespace InverntoryManager.Pages
         private async void Button_Clicked(object sender, EventArgs e)
         {
             bool responce =await DisplayAlert("Sign out", "Would you like to sign out?", "Yes", "No");
-            if (responce) { Application.Current.MainPage = new NavigationPage(new OpeningPage()); }
+            if (responce) { Application.Current.MainPage = new NavigationPage(new LoginPage()); }
             else { return; }
         }
 
@@ -118,7 +118,7 @@ namespace InverntoryManager.Pages
             if (repsonce)
             {
                 removeUser(_user);
-                Application.Current.MainPage = new NavigationPage(new OpeningPage());
+                Application.Current.MainPage = new NavigationPage(new LoginPage());
             }    
             else { return; }
         }
