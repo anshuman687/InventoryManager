@@ -11,7 +11,7 @@
         <ScrollView>
             <Grid BackgroundColor="White">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="180"/>
+                    <RowDefinition Height="250"/>
                     <RowDefinition Height="360"/>
 
 
