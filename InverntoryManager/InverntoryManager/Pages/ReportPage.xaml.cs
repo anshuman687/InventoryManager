@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ZXing.Net.Mobile.Forms;
 
 namespace InverntoryManager.Pages
 {
@@ -17,6 +18,20 @@ namespace InverntoryManager.Pages
         public ReportPage()
         {
             InitializeComponent();
+        }
+        private async void Qrscanner_Clicked(System.Object sender, System.EventArgs e)
+        {
+            ZXingScannerPage scanPage = new ZXingScannerPage();
+            scanPage.OnScanResult += (result) =>
+            {
+                scanPage.IsScanning = false;
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    Navigation.PopAsync();
+
+                });
+            };
+            await Navigation.PushAsync(scanPage);
         }
     }
 }

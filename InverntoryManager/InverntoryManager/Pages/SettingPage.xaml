@@ -5,12 +5,71 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="InverntoryManager.Pages.SettingPage"
-             Title="Settings">
+             Title="Issue &amp; Consumables">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Your Settings"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BackgroundColor="White">
+            <Grid Padding="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <StackLayout>     
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                        <Picker  Title="Select Contract" x:Name="StoreID" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+                            <Picker.Items>
+                                <x:String>01</x:String>
+                                <x:String>02</x:String>
+                                <x:String>03</x:String>
+                                <x:String>04</x:String>
+                                <x:String>05</x:String>
+                                <x:String>06</x:String>
+                            </Picker.Items>
+                        </Picker>
+                        <Label  Text="Job/Contract" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                </StackLayout>
+                <!--<SearchBar x:Name="SearchBar" Grid.Column="0" Placeholder="Search" TextChanged="SearchBar_TextChanged" />-->
+                <StackLayout Grid.Row="1" HorizontalOptions="CenterAndExpand">     
+                <Picker  Title="Select Employee" x:Name="Emp" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+                    <Picker.Items>
+                        <x:String>01</x:String>
+                        <x:String>02</x:String>
+                        <x:String>03</x:String>
+                        <x:String>04</x:String>
+                        <x:String>05</x:String>
+                        <x:String>06</x:String>
+                    </Picker.Items>
+                </Picker>
+                   <!--<Picker  Title="Select Location" x:Name="Location" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+                    <Picker.Items>
+                        <x:String>01</x:String>
+                        <x:String>02</x:String>
+                        <x:String>03</x:String>
+                        <x:String>04</x:String>
+                        <x:String>05</x:String>
+                        <x:String>06</x:String>
+                    </Picker.Items>
+                    </Picker>-->
+                </StackLayout>
+            </Grid>
+            <Frame HasShadow="False" CornerRadius="10" Padding="0" Margin="60,0,60,10">
+                <StackLayout>
+                    <Label Text="&#xf0072;" FontSize="60" FontFamily="{StaticResource MaterialFontFamily}" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand" TextColor="#42619a"/>
+                    <Label Text="Scan" TextColor="Black" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Qrscanner_Clicked"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Item Code" Margin="20,0,0,0" FontSize="15" FontAttributes="Bold"/>
+                <Label Text="Description" Margin="20,0,0,0" FontSize="15" FontAttributes="Bold"/>
+                <Label Text="QTY" Margin="30,0,0,0" FontSize="15" FontAttributes="Bold"/>
+                <Label Text="Store" Margin="40,0,0,0" FontSize="15" FontAttributes="Bold"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
