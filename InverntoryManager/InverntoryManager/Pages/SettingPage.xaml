@@ -16,8 +16,10 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <StackLayout>     
+                <StackLayout>
+                       
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                        <Frame Padding="0" HorizontalOptions="FillAndExpand"> 
                         <Picker  Title="Select Contract" x:Name="StoreID" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
                             <Picker.Items>
                                 <x:String>01</x:String>
@@ -28,11 +30,13 @@
                                 <x:String>06</x:String>
                             </Picker.Items>
                         </Picker>
-                        <Label  Text="Job/Contract" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+                        </Frame>
+                        <Label  Text="Job/Contract" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="10,0,0,0"/>
                 </StackLayout>
                 </StackLayout>
                 <!--<SearchBar x:Name="SearchBar" Grid.Column="0" Placeholder="Search" TextChanged="SearchBar_TextChanged" />-->
-                <StackLayout Grid.Row="1" HorizontalOptions="CenterAndExpand">     
+                <StackLayout Grid.Row="1" HorizontalOptions="CenterAndExpand">
+                    <Frame HorizontalOptions="FillAndExpand" Padding="0">       
                 <Picker  Title="Select Employee" x:Name="Emp" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
                     <Picker.Items>
                         <x:String>01</x:String>
@@ -43,7 +47,8 @@
                         <x:String>06</x:String>
                     </Picker.Items>
                 </Picker>
-                   <!--<Picker  Title="Select Location" x:Name="Location" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+                    </Frame>
+                    <!--<Picker  Title="Select Location" x:Name="Location" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
                     <Picker.Items>
                         <x:String>01</x:String>
                         <x:String>02</x:String>
