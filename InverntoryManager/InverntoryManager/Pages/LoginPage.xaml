@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:local="clr-namespace:InverntoryManager.MarkupExtension" xmlns:controls="clr-namespace:InverntoryManager.Renderer"
+             xmlns:local="clr-namespace:InverntoryManager.MarkupExtension"
+             xmlns:controls="clr-namespace:InverntoryManager.Renderer"
              mc:Ignorable="d" NavigationPage.HasNavigationBar="False"
              x:Class="InverntoryManager.Pages.LoginPage">
 
@@ -11,10 +12,8 @@
         <ScrollView>
             <Grid BackgroundColor="White">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="250"/>
+                    <RowDefinition Height="220"/>
                     <RowDefinition Height="360"/>
-
-
                 </Grid.RowDefinitions>
                 <StackLayout Grid.Row="0" BackgroundColor="White">
                     <Grid>
@@ -66,23 +65,23 @@
                             <Label Text="Sync">
                                 <Label.Triggers>
                                     <DataTrigger TargetType="Label"
-                     Binding="{Binding Source={x:Reference styleSwitch}, Path=IsToggled}"
-                     Value="true">
+                                     Binding="{Binding Source={x:Reference styleSwitch}, Path=IsToggled}"
+                                       Value="true">
                                         <Setter Property="FontAttributes"
-                    Value="Italic, Bold" />
-                                        <Setter Property="FontSize"
-                    Value="Large" />
-                                    </DataTrigger>
-                                </Label.Triggers>
-                            </Label>-->
-
-
-                            
+                                          Value="Italic, Bold" />
+                                         <Setter Property="FontSize"
+                                          Value="Large" />
+                                     </DataTrigger>
+                                 </Label.Triggers>
+                              </Label>-->
+                        
                         </StackLayout>
                         <StackLayout Grid.Row="5" Margin="40,10,40,10">
                             <Button Text="Sign In"  x:Name="signInBtm" Padding="0"
-                        BackgroundColor="#42619a" TextColor="White" FontAttributes="Bold" Clicked="signInBtm_Clicked"/>
+                              BackgroundColor="#42619a" TextColor="White" FontAttributes="Bold" Clicked="signInBtm_Clicked"/>
+                            <Button Text="Configure" TextColor="#42619a" HorizontalOptions="End" FontSize="20" BackgroundColor="Transparent" Clicked="Button_Clicked"/>
                         </StackLayout>
+                       
                     </Grid>
                 </StackLayout>
 

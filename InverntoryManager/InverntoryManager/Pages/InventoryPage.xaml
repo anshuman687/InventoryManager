@@ -25,6 +25,7 @@
 
 
                 <!--<SearchBar x:Name="SearchBar" Grid.Column="0" Placeholder="Search" TextChanged="SearchBar_TextChanged" />-->
+                <Frame Grid.Column="1" HorizontalOptions="FillAndExpand" Padding="0">     
                 <Picker Grid.Column="1" Title="StoreID" x:Name="StoreID" HorizontalOptions="FillAndExpand">
                     <Picker.Items>
                         <x:String>01</x:String>
@@ -35,6 +36,7 @@
                         <x:String>06</x:String>
                     </Picker.Items>
                 </Picker>
+                </Frame>
             </Grid>
             <Frame HasShadow="False" CornerRadius="10" Padding="0" Margin="60,0,60,10">
                 <StackLayout>
