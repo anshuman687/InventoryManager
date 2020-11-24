@@ -157,6 +157,8 @@
     <BundleResource Include="Resources\group%403x.png" />
     <BundleResource Include="Resources\materialdesignicons-webfont.ttf" />
     <BundleResource Include="Resources\appimg.jpeg" />
+    <BundleResource Include="Resources\ISSThumb.jpg" />
+    <BundleResource Include="Resources\SettingIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\minus.png" />

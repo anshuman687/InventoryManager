@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="True"
+             NavigationPage.HasBackButton="False"
              Title="Dashboard" 
              x:Class="InverntoryManager.Pages.HomePage" >
     <ContentPage.Content>
@@ -53,7 +54,7 @@
                     <Frame Padding="0" Margin="50,5,50,20" HeightRequest="80" HasShadow="False">
                         <StackLayout Orientation="Horizontal">
                                <Label Text="&#xf014a;" VerticalOptions="Center" HorizontalOptions="Start" FontFamily="{StaticResource MaterialFontFamily}" FontSize="40" Margin="15,0,0,0" TextColor="#42619a"/>
-                            <Button Text="Stock take" VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="Transparent" Margin="0,0,0,0" TextColor="#42619a"/>
+                            <Button Text="Stock take" VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="Transparent" Clicked="Button_Clicked_Stock_Take1" Margin="0,0,0,0" TextColor="#42619a"/>
                             <Label Text="&#xf0142;" TextColor="#42619a" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" FontFamily="{StaticResource MaterialFontFamily}" FontSize="25" />
                         </StackLayout>
                     </Frame>
@@ -61,7 +62,7 @@
                     <Frame Padding="0" Margin="50,5,50,20" HeightRequest="80" HasShadow="False">
                         <StackLayout Orientation="Horizontal">
                             <Label Text="&#xf014d;" VerticalOptions="Center" HorizontalOptions="Start" FontFamily="{StaticResource MaterialFontFamily}" FontSize="40" Margin="15,0,0,0" TextColor="#42619a"/>
-                            <Button Text="Current stock" VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="Transparent" Margin="0,0,0,0" TextColor="#42619a"/>
+                            <Button Text="Current stock" VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="Transparent" Clicked="Button_Clickked_Current_Stock" Margin="0,0,0,0" TextColor="#42619a"/>
                              <Label Text="&#xf0142;" TextColor="#42619a" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" FontFamily="{StaticResource MaterialFontFamily}" FontSize="25" Margin="0,0,0,0" />
                         </StackLayout>
                     </Frame>

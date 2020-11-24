@@ -108,9 +108,13 @@ namespace InverntoryManager.Pages
             }
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
+        //private async void Button_Clicked(object sender, EventArgs e)
+        //{
+        //    await Navigation.PushAsync(new ReportPage());
+        //}
+        private async void Button_Clicked_NewScreenOpen(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ReportPage());
+            await Navigation.PushAsync(new ServiceURLPage());
         }
     }
 }

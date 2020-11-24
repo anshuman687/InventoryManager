@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:InverntoryManager.Renderer"
+             x:Class="InverntoryManager.Pages.ServiceURLPage"
+             NavigationPage.HasNavigationBar="False"
+             >
+
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+          <Grid Margin="30,0,30,0">
+              <Grid.RowDefinitions>
+                  <RowDefinition Height="Auto"/>
+                  <RowDefinition Height="Auto"/>
+                  <RowDefinition Height="15"/>
+                  <RowDefinition Height="Auto"/>
+                  <RowDefinition Height="Auto"/>
+                  <RowDefinition Height="15"/>
+                  <RowDefinition Height="Auto"/>
+                  <RowDefinition Height="Auto"/>
+                  <RowDefinition Height="15"/>
+                  <RowDefinition Height="Auto"/>
+              </Grid.RowDefinitions>
+              <Label Text="Services URL" Grid.Row="0" TextColor="#42619a" FontFamily="{StaticResource MaterialFontFamily}"/>
+               <Frame Grid.Row="1" CornerRadius="3" Padding="0" HeightRequest="45">
+                     <controls:BorderlessEntry Placeholder="" MaxLength="100" Keyboard="Url" HorizontalOptions="FillAndExpand" TextColor="Black" x:Name="ServiceURL"/>
+                    </Frame>
+
+               <Label Text="Username" Grid.Row="3" TextColor="#42619a" FontFamily="{StaticResource MaterialFontFamily}"/>
+               <Frame Grid.Row="4" CornerRadius="3" Padding="0" HeightRequest="45">
+                     <controls:BorderlessEntry Placeholder="" MaxLength="50" HorizontalOptions="FillAndExpand" TextColor="Black" x:Name="Username"/>
+                    </Frame>
+
+               <Label Text="Password" Grid.Row="6" TextColor="#42619a" FontFamily="{StaticResource MaterialFontFamily}"/>
+               <Frame Grid.Row="7" CornerRadius="3" Padding="0" HeightRequest="45">
+                     <controls:BorderlessEntry Placeholder="" MaxLength="50" IsPassword="True" HorizontalOptions="FillAndExpand" TextColor="Black" x:Name="Password"/>
+                </Frame>
+              <StackLayout Grid.Row="9" Orientation="Horizontal">
+                  <StackLayout HorizontalOptions="FillAndExpand">
+                      <Button Text="Save" x:Name="SaveURL" Padding="0"
+                              BackgroundColor="#42619a" TextColor="White" FontAttributes="Bold" />
+                  </StackLayout>
+                  <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="red">
+                      <Button Text="Cancel" Grid.Row="9"  x:Name="Cancel" Padding="0"
+                              BackgroundColor="LightGray" TextColor="#42619a" FontAttributes="Bold" />
+                  </StackLayout>
+                  
+                  
+              </StackLayout>
+              
+          </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

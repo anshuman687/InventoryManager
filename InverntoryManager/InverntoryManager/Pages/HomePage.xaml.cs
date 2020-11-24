@@ -44,7 +44,7 @@ namespace InverntoryManager.Pages
             //    base.OnAppearing();
             //}
         }
-       private async void Button_Clicked(System.Object sender, System.EventArgs e)
+        private async void Button_Clicked(System.Object sender, System.EventArgs e)
         {
             await Navigation.PushAsync(new InventoryPage());
         }
@@ -57,6 +57,14 @@ namespace InverntoryManager.Pages
         private async void Button_Clicked_1(object sender, System.EventArgs e)
         {
             await Navigation.PushAsync(new SettingPage());
+        }
+        private async void Button_Clicked_Stock_Take1(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new StockTakePage());
+        }
+        private async void Button_Clickked_Current_Stock(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new CurrentStockPage());
         }
     }
 }
