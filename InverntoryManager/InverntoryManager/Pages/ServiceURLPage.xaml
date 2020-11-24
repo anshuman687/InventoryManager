@@ -36,11 +36,11 @@
                 </Frame>
               <StackLayout Grid.Row="9" Orientation="Horizontal">
                   <StackLayout HorizontalOptions="FillAndExpand">
-                      <Button Text="Save" x:Name="SaveURL" Padding="0"
+                      <Button Text="Save" x:Name="SaveURL" Padding="0" Clicked="SaveURL_Clicked"
                               BackgroundColor="#42619a" TextColor="White" FontAttributes="Bold" />
                   </StackLayout>
-                  <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="red">
-                      <Button Text="Cancel" Grid.Row="9"  x:Name="Cancel" Padding="0"
+                  <StackLayout HorizontalOptions="FillAndExpand">
+                      <Button Text="Cancel" Grid.Row="9"  x:Name="Cancel" Padding="0" Clicked="Cancel_Clicked"
                               BackgroundColor="LightGray" TextColor="#42619a" FontAttributes="Bold" />
                   </StackLayout>
                   

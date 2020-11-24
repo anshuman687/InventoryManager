@@ -48,7 +48,9 @@ namespace InverntoryManager.Pages
 
         private async void signInBtm_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new HomePage());
+            //await Navigation.PushAsync(new HomePage());
+            await Navigation.PushAsync(new MasterDetailPage1());
+
 
         }
         //    if (checkUserInfo())

@@ -14,7 +14,6 @@ namespace InverntoryManager
             InitializeComponent();
 
             MainPage = new NavigationPage(new LoginPage());
-            //MainPage = new NavigationPage(new StockTakePage());
         }
 
         protected override void OnStart()
