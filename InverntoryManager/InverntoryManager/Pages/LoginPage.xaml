@@ -5,9 +5,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:InverntoryManager.MarkupExtension"
              xmlns:controls="clr-namespace:InverntoryManager.Renderer"
+             xmlns:ViewModelBind="clr-namespace:InverntoryManager.ViewModel"
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="False"
-             x:Class="InverntoryManager.Pages.LoginPage">
+             x:Class="InverntoryManager.Pages.LoginPage"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <ViewModelBind:LoginViewModel/>
+    </ContentPage.BindingContext>
 
     <ContentPage.Content>
         <ScrollView>
@@ -59,6 +65,7 @@
                         <StackLayout Orientation="Horizontal" Grid.Row="4">
                             <StackLayout Orientation="Horizontal"  Margin="30,10,0,0">
                                 <CheckBox Color="#42619a" x:Name="showPassword" CheckedChanged="showPassword_CheckedChanged"/>
+                                <!--<CheckBox Color="#42619a" x:Name="showPassword" CheckedChanged="{Binding PasswordShowCommond}"/>-->
                                 <Label Text="Show password" VerticalOptions="Center"/>
                             </StackLayout>
                             <!--<Switch x:Name="styleSwitch" Margin="30,0,0,0"/>
@@ -77,12 +84,11 @@
                         
                         </StackLayout>
                         <StackLayout Grid.Row="5" Margin="40,10,40,10">
-                            <Button Text="Sign In"  x:Name="signInBtm" Padding="0"
-                              BackgroundColor="#42619a" TextColor="White" FontAttributes="Bold" Clicked="signInBtm_Clicked"/>
-                            <!--<Button Text="Configure" TextColor="#42619a" HorizontalOptions="End" FontSize="20" BackgroundColor="Transparent" Clicked="Button_Clicked"/>-->
+                             <Button Text="Sign In"  x:Name="signInBtm" Padding="0"
+                              BackgroundColor="#42619a" TextColor="White" FontAttributes="Bold" Command="{Binding LogInCommond}"/>
                             <Image Source="SettingIcon" Margin="0,10,0,0" HorizontalOptions="CenterAndExpand" HeightRequest="30" WidthRequest="30" Aspect="AspectFit">
                                 <Image.GestureRecognizers>
-                                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Button_Clicked_NewScreenOpen"/>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding ServiceURLCommond}"/>
                                 </Image.GestureRecognizers>
                             </Image>
                         </StackLayout>

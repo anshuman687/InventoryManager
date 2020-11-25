@@ -46,10 +46,10 @@ namespace InverntoryManager.Pages
 
 
 
-        private void signInBtm_Clicked(object sender, EventArgs e)
-        {
-            Application.Current.MainPage = new MasterDetailPage1();
-        }
+        //private void signInBtm_Clicked(object sender, EventArgs e)
+        //{
+        //    Application.Current.MainPage = new MasterDetailPage1();
+        //}
         //    if (checkUserInfo())
         //    {
         //        ConstentsUser.user = info;
@@ -105,15 +105,6 @@ namespace InverntoryManager.Pages
             {
                 password.IsPassword = true;
             }
-        }
-
-        //private async void Button_Clicked(object sender, EventArgs e)
-        //{
-        //    await Navigation.PushAsync(new ReportPage());
-        //}
-        private async void Button_Clicked_NewScreenOpen(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new ServiceURLPage());
         }
     }
 }

@@ -26,6 +26,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="MasterDetailPage1Detail.xaml.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Update="TeacherMainPageMaster.xaml.cs">
       <DependentUpon>TeacherMainPageMaster.xaml</DependentUpon>
     </Compile>
@@ -45,9 +48,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="MasterDetailPage1.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="MasterDetailPage1Detail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="MasterDetailPage1Master.xaml">
