@@ -48,12 +48,10 @@ namespace InverntoryManager.Pages
         {
             await Navigation.PushAsync(new InventoryPage());
         }
-
         private async void Button_Clicked1(System.Object sender, System.EventArgs e)
         {
             await Navigation.PushAsync(new ReportPage());
         }
-
         private async void Button_Clicked_1(object sender, System.EventArgs e)
         {
             await Navigation.PushAsync(new SettingPage());

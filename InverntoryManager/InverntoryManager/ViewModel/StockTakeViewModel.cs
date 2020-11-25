@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using InverntoryManager.Models;
 using Xamarin.Forms;
@@ -7,76 +8,61 @@ namespace InverntoryManager.ViewModel
 {
     public class StockTakeViewModel
     {
-        private ObservableCollection<StockTakeModel> items;
-        public ObservableCollection<StockTakeModel> Items
+        private List<StockTakeModelList> _stockTakeModelList;
+        public List<StockTakeModelList> ListOfStockTake
         {
-            get { return items; }
-            set
-            {
-                items = value;
-            }
+            get { return _stockTakeModelList; }
+            set { _stockTakeModelList = value; }
         }
-        private ObservableCollection<StockTakeModel321> items321;
-        public ObservableCollection<StockTakeModel321> Items321
-        {
-            get { return items321; }
-            set
-            {
-                items321 = value;
-            }
-        }
+
         public StockTakeViewModel()
         {
-            StockTakeStore123();
-            StockTakeStore321();
+            StockTakeStore();
         }
-
-        public void StockTakeStore123()
+        public void StockTakeStore()
         {
-            Items = new ObservableCollection<StockTakeModel>() {
-                new StockTakeModel()
-                {
-                    ItemCode = "WW01",
-                    Description = "BOC",
-                    SysQty = 12,
-                    CheckQty = 5
-                },
-                  new StockTakeModel()
-                {
-                    ItemCode = "WW02",
-                    Description = "BOC",
-                    SysQty = 7,
-                    CheckQty = 3
-                },
-            };
-        }
-
-        public void StockTakeStore321()
-        {
-            Items321 = new ObservableCollection<StockTakeModel321>() {
-                new StockTakeModel321()
-                {
+            var AList = new StockTakeModelList()
+    {
+        new StockTakeModel() {
                     ItemCode = "AG01",
                     Description = "weld",
                     SysQty = 12,
-                    CheckQty = 5
-                },
-                  new StockTakeModel321()
-                {
+                    CheckQty = 5 },
+        new StockTakeModel() {
                     ItemCode = "AG02",
                     Description = "weld",
-                    SysQty = 7,
-                    CheckQty = 3
-                },
-                  new StockTakeModel321()
-                {
-                    ItemCode = "AG03",
-                    Description = "BOC",
-                    SysQty = 9,
-                    CheckQty = 4
-                }
-            };
-        }
+                    SysQty = 2,
+                    CheckQty = 1 },
+    };
+            AList.Heading = "StoreID: AG";
 
+            var SList = new StockTakeModelList()
+    {
+       new StockTakeModel() {
+            ItemCode = "SG01",
+                    Description = "weld",
+                    SysQty = 8,
+                    CheckQty = 5 },
+        new StockTakeModel() {
+            ItemCode = "SG02",
+                    Description = "Stock",
+                    SysQty = 6,
+                    CheckQty = 3 },
+         new StockTakeModel() {
+            ItemCode = "SG03",
+                    Description = "weld",
+                    SysQty = 2,
+                    CheckQty = 1 },
+
+    };
+            SList.Heading = "StoreID: SG";
+            var list = new List<StockTakeModelList>()
+    {
+        AList,
+        SList
+    };
+
+            ListOfStockTake = list;
+        }
     }
 }

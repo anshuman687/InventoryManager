@@ -4,14 +4,11 @@
              x:Class="InverntoryManager.MasterDetailPage1Master"
              Title="Master">
   <StackLayout>
-    <ListView x:Name="MenuItemsListView"
+        <ListView x:Name="MenuItemsListView"
               SeparatorVisibility="None"
               HasUnevenRows="true"
               ItemsSource="{Binding MenuItems}">
-      <ListView.Header>
-       
-      </ListView.Header>
-      <ListView.ItemTemplate>
+            <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
             <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand">

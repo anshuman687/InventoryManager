@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using InverntoryManager.Models;
 
@@ -6,75 +7,60 @@ namespace InverntoryManager.ViewModel
 {
     public class CurrentStockViewModel
     {
-        private ObservableCollection<CurrentStockModel> items;
-        public ObservableCollection<CurrentStockModel> Items
+        private List<CurrentStockModelList> _currentStockModelList;
+        public List<CurrentStockModelList> ListOfCurrentstock
         {
-            get { return items; }
-            set
-            {
-                items = value;
-            }
-        }
-        private ObservableCollection<CurrentStockModel321> items321;
-        public ObservableCollection<CurrentStockModel321> Items321
-        {
-            get { return items321; }
-            set
-            {
-                items321 = value;
-            }
+            get { return _currentStockModelList; }
+            set { _currentStockModelList = value; }
         }
         public CurrentStockViewModel()
         {
-            CurrentStockStore123();
-            CurrentStockStore321();
+            CurrentStockStore();
         }
-        public void CurrentStockStore123()
+        public void CurrentStockStore()
         {
-            Items = new ObservableCollection<CurrentStockModel>() {
-                new CurrentStockModel()
-                {
+            var AList = new CurrentStockModelList()
+    {
+        new CurrentStockModel() {
                     ItemCode = "WW01",
                     Description = "BOC",
                     SysQty = 12,
-                    Location = "Store1"
-                },
-                  new CurrentStockModel()
-                {
+                    Location = "Store3" },
+
+        new CurrentStockModel() {
                     ItemCode = "WW02",
                     Description = "eld",
                     SysQty = 7,
-                    Location = "Store1"
-                },
-
-            };
-        }
-        public void CurrentStockStore321()
-        {
-            Items321 = new ObservableCollection<CurrentStockModel321>() {
-                new CurrentStockModel321()
-                {
-                    ItemCode = "AG01",
-                    Description = "Makita1",
-                    SysQty = 1,
-                    Location = "Store1"
-                },
-                  new CurrentStockModel321()
-                {
-                    ItemCode = "AG02",
-                    Description = "Makita1",
+                    Location = "Store1"},
+         new CurrentStockModel() {
+                    ItemCode = "WW03",
+                    Description = "eld",
                     SysQty = 7,
-                    Location = "Store1"
-                },
-                  new CurrentStockModel321()
-                {
-                    ItemCode = "AG03",
-                    Description = "Makita1",
-                    SysQty = 9,
-                    Location = "Work"
-                }
+                    Location = "Store8"},
+    };
+            AList.Heading = "Item Group: WW";
 
-            };
+            var SList = new CurrentStockModelList()
+    {
+       new CurrentStockModel() {
+            ItemCode = "SG001",
+                    Description = "weld",
+                    SysQty = 8,
+                    Location = "Store4" },
+        new CurrentStockModel() {
+            ItemCode = "SG002",
+                    Description = "Stock",
+                    SysQty = 6,
+                   Location = "Store5" },
+
+    };
+            SList.Heading = "Item Group: SG";
+            var list = new List<CurrentStockModelList>()
+    {
+        AList,
+        SList
+    };
+            ListOfCurrentstock = list;
         }
     }
 }
