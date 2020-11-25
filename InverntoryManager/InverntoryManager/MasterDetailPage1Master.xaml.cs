@@ -35,7 +35,7 @@ namespace InverntoryManager
                 MenuItems = new ObservableCollection<MasterDetailPage1MasterMenuItem>(new[]
                 {
                     new MasterDetailPage1MasterMenuItem { Id = 0, Icon="editProfile", Title = "Dashboard", TargetType = typeof(HomePage) },
-                    new MasterDetailPage1MasterMenuItem { Id = 1, Icon="SettingIcon", Title = "Settings", TargetType = typeof(ComingSoonPage) },
+                    new MasterDetailPage1MasterMenuItem { Id = 1, Icon="SettingIcon", Title = "Settings", TargetType = typeof(ServiceURLPage) },
                     new MasterDetailPage1MasterMenuItem { Id = 2, Icon="trash", Title = "Logout", TargetType = typeof(LoginPage) },
                 });
             }

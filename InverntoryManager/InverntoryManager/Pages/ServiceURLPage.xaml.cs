@@ -14,12 +14,14 @@ namespace InverntoryManager.Pages
 
         private async void SaveURL_Clicked(System.Object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new MasterDetailPage1());
+            await Navigation.PopAsync();
+            //Application.Current.MainPage = new LoginPage();
         }
 
         private async void Cancel_Clicked(System.Object sender, System.EventArgs e)
         {
             await Navigation.PopAsync();
+            //Application.Current.MainPage = new LoginPage();
         }
     }
 }
