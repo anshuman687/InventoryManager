@@ -10,8 +10,8 @@
         <VM:CurrentStockViewModel/>
     </ContentPage.BindingContext>
 
-    <ContentPage.Content>
-        <StackLayout BackgroundColor="White" Margin="20,0,20,20">
+      <ContentPage.Content>
+            <StackLayout BackgroundColor="White" Margin="15,0,15,0">
             <Frame HasShadow="False" Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="Center" >
                 <Picker  Title="Select Item Group/All" x:Name="ItemGroup" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
                     <Picker.Items>
@@ -32,30 +32,29 @@
             </StackLayout>
             <StackLayout >
                 <ListView ItemsSource="{Binding ListOfCurrentstock}"
-                     CachingStrategy="RecycleElement"
-                      RowHeight="30" IsGroupingEnabled="true"
-                              >
-                    <ListView.GroupHeaderTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <Label Text="{Binding Heading}" FontSize="18" FontAttributes="Bold" BackgroundColor="AliceBlue" />
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.GroupHeaderTemplate>
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
-                                    <Label Text="{Binding ItemCode}" FontSize="Default" />
-                                    <Label Text="{Binding Description}" FontSize="Default" WidthRequest="150" HorizontalTextAlignment="Center"/>
-                                    <Label Text="{Binding SysQty}" FontSize="Default" WidthRequest="50" HorizontalTextAlignment="Center"/>
-                                    <Label Text="{Binding Location}" FontSize="Default" Margin="20,0,0,0" HorizontalTextAlignment="End" />
-                                </StackLayout>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                     IsGroupingEnabled="true" SeparatorVisibility="Default">
+    <ListView.GroupHeaderTemplate>
+        <DataTemplate>
+            <ViewCell>
+                <Label Text="{Binding Heading}" FontSize="18" VerticalTextAlignment="Center" FontAttributes="Bold" BackgroundColor="AliceBlue" />
+            </ViewCell>
+        </DataTemplate>
+    </ListView.GroupHeaderTemplate>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                        <Label Text="{Binding ItemCode}" FontSize="Default" />
+                                        <Label Text="{Binding Description}" FontSize="Default" WidthRequest="150" HorizontalTextAlignment="Center"/>
+                                        <Label Text="{Binding SysQty}" FontSize="Default" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                                        <Label Text="{Binding Location}" FontSize="Default" Margin="20,0,0,0" HorizontalTextAlignment="End" />
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
             </StackLayout>
+           
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -11,8 +11,7 @@
     </ContentPage.BindingContext>
 
       <ContentPage.Content>
-        <ScrollView>
-            <StackLayout BackgroundColor="White" Margin="20,0,20,20">
+            <StackLayout BackgroundColor="White" Margin="15,0,15,0">
             <Frame HasShadow="False" HorizontalOptions="Center" VerticalOptions="Center" >
                 <StackLayout>
                     <Label Text="&#xf0072;" FontSize="60" FontFamily="{StaticResource MaterialFontFamily}" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand" TextColor="#42619a"/>
@@ -20,12 +19,8 @@
                 </StackLayout>
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="Qrscanner_Clicked"/>
-                    <!--<TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding TapCommondQRScanner}"/>-->
                 </Frame.GestureRecognizers>
             </Frame>
-            <StackLayout>
-                <Label Text="StoreID: 123" FontSize="18" FontAttributes="Bold"/>
-            </StackLayout >
             <StackLayout BackgroundColor="AliceBlue" Padding="0,5,0,5" Orientation="Horizontal">
                 <Label Text="Item Code" FontSize="Default" FontAttributes="Bold"/>
                 <Label Text="Description" FontSize="Default" Margin="15,0,0,0" FontAttributes="Bold"/>
@@ -33,9 +28,15 @@
                 <Label Text="Check Qty" FontSize="Default" Margin="15,0,0,0" FontAttributes="Bold"/>
             </StackLayout>
             <StackLayout >
-                <ListView ItemsSource="{Binding Items}"
-                      CachingStrategy="RecycleElement"
-                      RowHeight="30">
+                <ListView ItemsSource="{Binding ListOfStockTake}"
+                      IsGroupingEnabled="true" SeparatorVisibility="Default">
+    <ListView.GroupHeaderTemplate>
+        <DataTemplate>
+            <ViewCell>
+                <Label Text="{Binding Heading}" FontSize="18" VerticalTextAlignment="Center" FontAttributes="Bold" BackgroundColor="AliceBlue" />
+            </ViewCell>
+        </DataTemplate>
+    </ListView.GroupHeaderTemplate>
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
@@ -50,37 +51,6 @@
                         </ListView.ItemTemplate>
                     </ListView>
             </StackLayout>
-
-            <BoxView BackgroundColor="#42619a" Margin="0,20,0,20" HeightRequest="1"/>
-            <StackLayout>
-                <Label Text="StoreID: 321" FontSize="18" FontAttributes="Bold"/>
-            </StackLayout>
-            <StackLayout BackgroundColor="AliceBlue" Padding="0,5,0,5" Orientation="Horizontal">
-                <Label Text="Item Code" FontSize="Default" FontAttributes="Bold"/>
-                <Label Text="Description" FontSize="Default" Margin="15,0,0,0" FontAttributes="Bold"/>
-                <Label Text="Sys Qty" FontSize="Default" Margin="15,0,0,0" FontAttributes="Bold"/>
-                <Label Text="Check Qty" FontSize="Default" Margin="15,0,0,0" FontAttributes="Bold"/>
-            </StackLayout>
-            <StackLayout>
-                <ListView ItemsSource="{Binding Items321}"
-                      CachingStrategy="RecycleElement"
-                      RowHeight="30">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
-                                    <StackLayout Orientation="Horizontal" VerticalOptions="Center">
-                                        <Label Text="{Binding ItemCode}" FontSize="Default" />
-                                        <Label Text="{Binding Description}" FontSize="Default" WidthRequest="150" HorizontalTextAlignment="Center"/>
-                                        <Label Text="{Binding SysQty}" FontSize="Default" WidthRequest="50" HorizontalTextAlignment="Center" />
-                                        <Label Text="{Binding CheckQty}" FontSize="Default" WidthRequest="50" HorizontalTextAlignment="End" />
-                                    </StackLayout>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-            </StackLayout>
-           
         </StackLayout>
-        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
