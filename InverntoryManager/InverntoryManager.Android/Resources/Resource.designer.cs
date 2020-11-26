@@ -35,6 +35,8 @@ namespace InverntoryManager.Droid
 			global::Xamarin.Auth._MobileServices.Resource.String.title_activity_webview = global::InverntoryManager.Droid.Resource.String.title_activity_webview;
 			global::PCLCrypto.Resource.String.ApplicationName = global::InverntoryManager.Droid.Resource.String.ApplicationName;
 			global::PCLCrypto.Resource.String.Hello = global::InverntoryManager.Droid.Resource.String.Hello;
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.ApplicationName = global::InverntoryManager.Droid.Resource.String.ApplicationName;
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.Hello = global::InverntoryManager.Droid.Resource.String.Hello;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::InverntoryManager.Droid.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.coordinatorLayoutStyle = global::InverntoryManager.Droid.Resource.Attribute.coordinatorLayoutStyle;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::InverntoryManager.Droid.Resource.Attribute.font;
